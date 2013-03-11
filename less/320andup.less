@@ -64,6 +64,42 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 //  9. TEMPLATE SPECIFICS 	==============================
 //  10. MEDIA QUERIES 		==============================
 
+
+// Ab hier eigene Definitionen, da 320 Standard ist gehts direkt los !
+// Parameter setzen
+@bgColorNavigation: #f1f1f1; // Hintergrundfarbe der Navigation
+@heightNavigation: 30px; // Höhe der Navigation dient auch zur vertikalen Textausrichtung siehe "line-height"
+/* Navigation */
+nav {
+  position: relative;
+  z-index: 99;
+	background-color:@bgColorNavigation;
+	width:100%;
+  height: @heightNavigation;
+  padding:0;margin:0;
+	.bordered(#000, #000, #000, #000);
+}
+nav ul {
+  float: right;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+nav ul li {
+  float: left;
+  padding:0;
+  margin:0;
+	background-color:darken(@bgColorNavigation,20);
+}
+nav ul li a {
+  padding: 0 1em;
+  display: block;
+  text-align: center;
+  height: @heightNavigation;
+  line-height: @heightNavigation;
+  font-size: 140%;
+  text-shadow: 1px 1px #646464;
+}
 @media print {
 @import "print.less";
 }

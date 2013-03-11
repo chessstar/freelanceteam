@@ -113,8 +113,23 @@ section {
   overflow: visible;
 }
 /* Page =================================================== */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
 html {
-  background: #ffffff;
+  background: #e5e5e5;
   font-size: 62.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #f3f5f6;
@@ -341,18 +356,18 @@ sub {
 /* Colour =================================================== */
 a {
   text-decoration: none;
-  color: #013568;
+  color: #e81010;
 }
 a:visited {
-  color: #000203;
+  color: #890909;
 }
 a:hover {
   text-decoration: underline;
-  color: #011b35;
+  color: #b80d0d;
 }
 a:focus {
   outline: thin dotted;
-  color: #000000;
+  color: #590606;
 }
 a:hover,
 a:active {
@@ -1393,7 +1408,6 @@ select[size] {
 }
 textarea {
   resize: vertical;
-  overflow: auto;
   height: auto;
   overflow: auto;
   vertical-align: top;
@@ -1859,6 +1873,41 @@ table tbody tr:hover th {
 .table-striped tbody tr:nth-child(odd) th {
   background-color: #c7ced6;
 }
+/* Navigation */
+nav {
+  position: relative;
+  z-index: 99;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+}
+nav ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  background-color: #bebebe;
+}
+nav ul li a {
+  padding: 0 1em;
+  display: block;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-size: 140%;
+  text-shadow: 1px 1px #646464;
+}
 @media print {
   /* Print =================================================== */
   * {
@@ -1926,9 +1975,6 @@ table tbody tr:hover th {
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
-  body {
-    max-width: 1440px;
-  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* 2x =================================================== */
