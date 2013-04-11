@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Freelanceteam | Startseite</title>
-	<link rel="stylesheet" href="/css/fleelanceteam.css" type="text/css">
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- http://t.co/dKP3o1e -->
@@ -50,106 +49,216 @@
 	<meta name="msapplication-TileImage" content="img/apple-touch-icon-144x144-precomposed.png">
 	<meta name="msapplication-TileColor" content="#000">
 	<meta http-equiv="cleartype" content="on">
+	<!--[if gte IE 9]>
+		<style type="text/css">
+		  .gradient {
+		     filter: none;
+		  }
+		</style>
+	<![endif]-->
 </head>
 <body>
+<noscript>
+	<p id="noscript">Bitte aktivieren Sie Javascript zu einwandfreien Benutzung dieser Webseite.</p>
+</noscript>
 <!-- Obere Navigation -->
-	<nav class="clearfix">
+	<nav id="nav_top" class="clearfix">
 	  <ul>
-	    <li><a href="#">Kontakt</a></li>
-	    <li><a href="#">Impressum</a></li>
+	    <li><a id="contact" class="secondcolor" href="#">Kontakt</a></li>
+	    <li><a id="about" class="secondcolor" href="#">Impressum</a></li>
     </ul>
 	</nav>
 <!-- Header -->
-	<header>
-		<div id="headerbox">
-			<div class="standardbox1">
-				<img src="bilder/team1.png" width="350" height="250" alt="Kaimer, Paul">
-      </div>
-   		<div class="standardbox1">
-        <h1>Mustermann, Mustermann</h1>
-        <h2>Freelance Trio für Webdesign</h2>
-        <p>Hannover, Köln</p>
-      </div>
-       <div class="clearer"></div>            
-     </div>
-   </header>
-<!-- Inhalt -->
-	<section>
-<!-- große Referenzen -->
-	 	<div id=referenzbox1>
-     	<div class="standardbox1">
-      	<h2>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</h2>
-      </div>
-     	<div class="standardbox1">
-	     	<img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-	     </div>
-     	<div class="standardbox1">
-	     	<img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-       </div>
-       <div class="clearer"></div>        
-    </div>
- <!-- kleine Referenzen -->
-		<div id=referenzbox2>
-			<div class="standardbox1">
-				<div class="minibox1">
-					<img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-				</div>
-	    	<div class="minibox1">
-				  <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-        </div>
-	      <div class="minibox1">
-           <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-	      </div>
-	      <div class="minibox1">
-	        <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-        </div>
-				<div class="minibox1">
-          <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-	      </div>
-	      <div class="minibox1">
-           <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-        </div>
-	      <div class="minibox1">
-	        <img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-	      </div>
-	      <div class="minibox1">
-					<img src="bilder/heinrichs.jpg" alt="Website Restaurant Heinrichs">
-        </div>
-	      <div class="clearer"></div>            
-		  </div>
-		 	<div class="standardbox1">
-		  	<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
-		  </div>
-		 	<div class="standardbox1">
-		  	<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
-		  </div>
-		  <div class="clearer"></div>            
+	<header class="clearfix">
+		<div class="portrait"><img src="img/freelancer.jpg" alt="Mustermann"></div>
+		<div id="freelanceteam_description">
+			<div id="freelanceteam_description_content">
+				<p class="description black">Thomas Kaimer,<br />Alexander Paul</p>
+				<p class="description blue">Freelance Team für Webdesign</p>
+				<p class="description yellow">Hannover, Köln</p>
+			</div>
 		</div>
-<!-- Über uns -->
-		<div id=ueberunsbox1>
-			<div class="standardbox1"></div>
-	   	<div class="standardbox1"></div>
-     	<div class="standardbox1"></div>
-      <div class="clearer"></div>            
+	</header>
+	<!-- Inhalte -->
+	<section id="referenzen_gross" class="gradient">
+		<div class="wrapper_circleholder">
+			<hr id="line">
+			<div class="circleholder clearfix">
+				<div class="circle" id="unicolor_blue"></div>
+				<div class="circle" id="unicolor_yellow"></div>
+			</div>
 		</div>
-<!-- Preise  -->
-   	<div id=preisbox1>
-	   	<div class="standardbox1"></div>
-     	<div class="standardbox1"></div>
-    	<div class="standardbox1"></div>
-      <div class="clearer"></div>            
-    </div>
-<!-- Kontakt -->
-   	<div id=kontaktbox1>
-	   	<div class="standardbox1"></div>
-     	<div class="standardbox1"></div>
-     	<div class="standardbox1"></div>
-      <div class="clearer"></div>            
-    </div>
-<!-- Impressum -->
-   	<div id=impressum></div>
+		<!-- Untere Navigation -->
+		<nav id="nav_bottom" class="clearfix">
+			<ul>
+			  <li><a id="references" href="#">Referenzen</a></li>
+			  <li><a id="aboutus" href="#">Über uns</a></li>
+			  <li><a id="prices" href="#">Preise</a></li>
+		  </ul>
+		</nav>
+		<a class="up" href="#"><img class="pfeil" src="img/pfeil_weiss.png"></a>
+	<!-- große Referenzen -->
+		<div id=referenzbox1 class="clearfix">
+			<div class="floatme"><p class="blue">Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+			</div>
+		 	<div class="standardbox1">
+			 	<img src="img/referenz_gross.png" alt="">
+			</div>
+		 	<div class="standardbox2">
+			 	<img src="img/referenz_gross.png" alt="">
+			</div>
+		</div>
 	</section>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<section id="referenzen_klein">
+		<div id=referenzbox2 class="clearfix">
+			<div id="two_boxes">
+				<div class="textbox1"><p class="blue">11111111111 Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+				</div>
+			 	<div class="textbox2"><p class="blue">222222222222 Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+				</div>
+			</div>
+		 	<div class="textbox3">
+				 <!-- kleine Referenzen -->
+				<div id=referenzbox2>
+					<div class="clearfix">
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox2">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox1">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+						<div class="minibox2">
+							<img src="img/referenz_klein.png" alt="">
+						</div>
+					</div>
+				</div>
+		 		<!-- Ende kleine Referenzen -->
+			</div>
+		</div>
+	</section>
+	<hr>
+	<!-- Über uns -->		
+	<section id="ueberuns">
+
+		<div class="wrapper_circleholder clearfix">
+			<a class="up" href="#"><img class="pfeil" src="img/pfeil_orange.png"></a>
+			<div class="circleholder clearfix">
+				<div class="circle" id="photo_blue"></div>
+				<div class="circle" id="photo_yellow"></div>
+			</div>
+		</div>
+		<div class="clearfix">		
+			<div class="ueberunsbox1">
+				<h4>Über uns</h4>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+			<div class="ueberunsbox2">
+				<h5>Dipl.-Ing. (FH) Thomas Kaimer</h5>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re. Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+			<div class="ueberunsbox3">
+				<h5>Alexander Paul</h5>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re. Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+		</div>
+	</section>
+<!-- Preisbeispiele  -->
+	<section id="preise">
+		<hr class="hr_schoko">
+		<div class="wrapper_circleholder clearfix">
+			<a class="up" href="#"><img class="pfeil" src="img/pfeil_schoko.png"></a>
+			<div class="circleholder clearfix">
+				<div class="circle" id="unicolor_blue"></div>
+				<div class="circle" id="unicolor_yellow"></div>
+			</div>
+		</div>
+		<div class="clearfix">
+			<div class="preisbox1">
+				<h4>Preisbeispiele</h4>
+		</div>
+			<div class="preisbox2"></div>
+			<div class="preisbox3"></div>
+		</div>
+		<div class="clearfix">
+			<div class="preisbox4">
+				<h5>Einfache Seite</h5>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+			<div class="preisbox5">
+				<h5>Standard-Seite</h5>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+			<div class="preisbox6">
+				<h5>Premium-Seite</h5>
+				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+			</div>
+		</div>
+		<hr>
+	</section>
+<!-- Kontakt -->
+	<section id="kontakt">
+		<a class="up" href="#"><img class="pfeil" src="img/pfeil_orange.png"></a>
+		<div class="clearfix">
+			<div class="kontaktbox1">
+				<h4 class="abstand">Nehmen Sie Kontakt mit uns auf</h4>
+				<p>Haben Sie Fragen oder wünschen Sie weitere Informationen? Füllen Sie bitte unser Kontaktformular aus.</p>
+			</div>
+			<div class="kontaktbox2">
+				<form class="clearfix">
+					<label for="fullname">Name:</label>
+					<input type="text" name="fullname" required  />
+					<label for="email">E-Mail:</label>
+					<input type="email" name="email" required  />
+					<label for="message">Nachricht:</label>	
+					<textarea rows="8" cols="50" required></textarea>
+	 				<input type="submit" value="Senden">
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Impressum -->
+	<section id="impressum">
+		<hr class="hr_schoko">
+		<a class="up" href="#"><img class="pfeil" src="img/pfeil_schoko.png"></a>
+		<div class="clearfix">
+			<div class="impressumbox1">
+				<h4 class="abstand">Impressum</h4>
+				<h5>Angaben gemäß § 5 TMG:</h5>
+			</div>
+			<div class="impressumbox2">
+				<p class="txt_impressum">Thomas Kaimer</p>
+				<p class="txt_impressum">Velvetstr. 2</p>
+				<p class="txt_impressum txt_last">30451 Hannover</p>
+			</div>
+			<div class="impressumbox3">
+				<p class="txt_impressum">Alexander Paul</p>
+				<p class="txt_impressum">Herninghof 4</p>
+				<p class="txt_impressum txt_last">30457 Hannover</p>
+			</div>
+			<div class="impressumbox4">
+				<p class="txt_impressum">Telefon: 0511 2353890</p>
+				<p class="txt_impressum">Telefax: +49 32224309503</p>
+				<p class="txt_impressum txt_last">kontakt@wir.koennen.es</p>
+			</div>
+		</div>
+	</section>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/freelanceteam.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 </body>
 </html>

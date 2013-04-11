@@ -64,6 +64,21 @@ border-left : solid 1px @left-color;
 border-right : solid 1px @right-color;
 border-bottom : solid 1px @bottom-color; }
 
+// by Tom .circled(COLOR, DIAMETER)
+.circled(@circle-color: #fff, @diameter: 20px, @thickness: 2px) {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width:@diameter;
+height:@diameter;
+-webkit-border-radius : (@diameter/2);
+-moz-border-radius : (@diameter/2);
+border-radius : (@diameter/2);
+border-top : solid @thickness @circle-color;
+border-left : solid @thickness @circle-color;
+border-right : solid @thickness @circle-color;
+border-bottom : solid @thickness @circle-color; }
+
 // .rounded(VALUE);
 
 .rounded(@radius:4px) {

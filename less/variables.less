@@ -11,7 +11,7 @@
 
 // 1. ROOT 					==============================
 
-@bodycolor : #e5e5e5;
+@bodycolor : @lightGray;
 @textcolor : black;
 
 // 2. TYPOGRAPHY 			==============================
@@ -36,10 +36,15 @@
 
 // Links
 
-@linkcolor 		    : rgb(232,16,16);
-@linkcolorhover 	: darken(@linkcolor, 10);
-@linkcolorvisited   : darken(@linkcolorhover, 10);
-@linkcolorfocus 	: darken(@linkcolorvisited, 10);
+@linkcolor 		    : rgb(87,75,65);
+@linkcolorhover 	: @linkcolor;
+@linkcolorvisited : @linkcolor;
+@linkcolorfocus 	: @linkcolor;
+
+@second_linkcolor 		    : rgb(255,255,255);
+@second_linkcolorhover 	 : @second_linkcolor;
+@second_linkcolorvisited : @second_linkcolor;
+@second_linkcolorfocus 	 : @second_linkcolor;
 
 // greyscale
 
