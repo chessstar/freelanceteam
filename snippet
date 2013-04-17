@@ -1,3 +1,52 @@
-		<div class="distancewrapper">
-			<a class="up" href="#"><img class="pfeil" src="img/pfeil_orange.png" height="25" width="25"></a>
+#unicolor_yellow	{
+	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	background-color:@darkYellow;
+	margin-left:5px;
+	}
+
+
+#unicolor_blue	{
+	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	background-color:@darkBlue;
+	margin-right:5px;
+	}
+
+
+<!-- Kontakt -->
+	<section id="kontakt">
+		<a class="up" href="#"><img class="pfeil" src="img/pfeil_orange.png"></a>
+		<div class="clearfix">
+			<div class="kontaktbox1">
+				<h4 class="abstand">Nehmen Sie Kontakt mit uns auf</h4>
+				<p>Haben Sie Fragen oder wünschen Sie weitere Informationen?</p>
+			</div>
+
+			<div class="kontaktbox2">
+			<p><a href="mailto:kontakt@webfabrikanten.de">kontakt@webfabrikanten.de</a></p>
+			</div>
 		</div>
+	</section>
+
+
+
+				<form class="clearfix" method="post" id="ajax_form" action="">
+					<label for="fullname">Name:</label>
+					<input type="text" name="fullname" required  />
+					<label for="email">E-Mail:</label>
+					<input type="email" name="email" required  />
+					<label for="message">Nachricht:</label>	
+					<textarea name="message" rows="8" cols="50" required></textarea>
+	 				<input type="submit" value="Senden">
+				</form>
+
+
+	// Ajax-Formular senden
+		$('#ajax_form').bind('submit', function() {
+			var form = $('#ajax_form');
+			var data = form.serialize();
+			$.post('http://www.kaimer.org/webfabrikanten/mail.php', data, function(response)	{
+				alert("Vielen Dank für Ihre Nachricht");
+			});
+			return false;
+		});
+	// 

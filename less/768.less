@@ -11,7 +11,44 @@
 
 // 1. ROOT 					==============================
 // 2. TYPOGRAPHY 			==============================
-p.description	{
+p, li	{
+	.font-size(16);
+	}
+h4, h5	{
+	.font-size(18);
+	}
+
+h1,h2	{
+	margin-bottom : @baselineheight / 2;
+	.font-size(20);
+	line-height : 1.2;
+	}
+h3	{ 
+	margin-bottom : @baselineheight / 2;
+	.font-size(18);
+	line-height : 1.2; }
+nav#nav_bottom ul li a, nav#nav_top ul li a {
+  height: @heightNavigationBottom * 120 / 110; // Änderung font-size von 110% auf 120 % umgesetzt
+  line-height: @heightNavigationBottom * 120 / 110;
+  font-size: 120%;
+}
+nav#nav_top, nav#nav_bottom  {
+  height: @heightNavigationTop * 120 / 110;
+}
+nav#nav_bottom	{
+	position:absolute;
+	top:@heightNavigationTop * 120 / 110;  // Position absolut in Abhängigkeit der Veränderung font-size anpassen
+	}
+p.blue	{
+	color:@darkBlue;
+	margin:0.8em 0;
+	font-size:120%;
+	}
+p.yellow	{
+	color:@darkYellow;
+	font-size:120%;
+	}
+p.schoko {
 	font-size:160%;
 	}
 // 3. COLOUR 				==============================
@@ -19,12 +56,12 @@ p.description	{
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
 .portrait {
-	margin:0 0 0 12.5%;
+	margin:0 3% 0 12.5%;
 	float:left;
-	max-width: 55%;
+	max-width: 37.5%;
 	}
 #freelanceteam_description	{
-	max-width: 32.5%;
+	max-width: 47%;
 	}
 .circleholder	{
 	margin-right:12.5%;
@@ -36,9 +73,7 @@ nav#nav_top ul {
   margin:0 12.5% 0 0;
 }
 nav#nav_bottom	{
-	position:absolute;
 	right:12.5%;
-	top:@heightNavigationTop;
 }
 .floatme	{
 	max-width:23%;
@@ -46,13 +81,13 @@ nav#nav_bottom	{
 	margin-right:1.5%;
 	float:left;
 	}
-.standardbox1	{
+#standardbox1	{
 	max-width:23%;
 	margin-left:1.5%;
 	margin-right:1.5%;
 	float:left;
 	}
-.standardbox2	{
+#standardbox2	{
 	max-width:23%;
 	margin-left:1.5%;
 	margin-right:12.5%;
@@ -63,12 +98,11 @@ nav#nav_bottom	{
 	}
 #two_boxes	{
 .box-sizing(border-box);
-	margin-right:12.5%;
-	margin-left:1.5%;	
+	margin:2.5% 12.5% 2.5% 1.5%;
 	max-width:49%;
 	float:right;
 }
-.textbox1	{
+#textbox1	{
 	.box-sizing(border-box);
 	max-width:47%;
 	padding-left:0%;
@@ -76,7 +110,7 @@ nav#nav_bottom	{
 	margin-right:3%;
 	float:left;
 	}
-.textbox2	{
+#textbox2	{
 	.box-sizing(border-box);
 	max-width:47%;
 	margin-left:3%;
@@ -84,11 +118,10 @@ nav#nav_bottom	{
 	padding-right:0%;
 	float:left;
 	}
-.textbox3	{
+#textbox3	{
 	.box-sizing(border-box);
 	max-width:23%;
-	margin-left:12.5%;
-	margin-right:1.5%;
+	margin:2.5% 1.5% 2.5% 12.5%;
 	float:left;
 	}
 .ueberunsbox1	{
@@ -106,17 +139,22 @@ nav#nav_bottom	{
 	float:left;
 	margin:0 12.5% 0 0;
 	}
-.preisbox1,.preisbox4	{
+.preisbox1	{
+	width:75%;
+	clear:both;
+	margin:0 12.5% 0 12.5%;
+	}
+.preisbox2	{
 	width:23%;
 	float:left;
 	margin:0 3% 0 12.5%;
 	}
-.preisbox2,.preisbox5	{
+.preisbox3	{
 	width:23%;
 	float:left;
 	margin:0 3% 0 0;
 	}
-.preisbox3,.preisbox6	{
+.preisbox4	{
 	width:23%;
 	float:left;
 	margin:0 12.5% 0 0;
@@ -140,13 +178,13 @@ nav#nav_bottom	{
 	width:23%;
 	max-width:23%;
 }
- .impressumbox3	{
+.impressumbox3	{
 	margin:0 3% 0 0;
 	float:left;
 	width:23%;
 	max-width:23%;
 	}
- .impressumbox4	{
+.impressumbox4	{
 	margin:0 12.5% 0 0;
 	float:left;
 	width:23%;

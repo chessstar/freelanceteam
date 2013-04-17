@@ -2,7 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Freelanceteam | Startseite</title>
+	<title>Die Webfabrikanten</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script src="js/webfabrikanten.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- http://t.co/dKP3o1e -->
@@ -10,11 +14,12 @@
 	<meta name="MobileOptimized" content="320">
 	<!-- For all browsers -->
 	<link rel="stylesheet" href="css/320andup.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<script src="js/selectivizr-min.js"></script>
 	<![endif]-->
 	<!-- JavaScript -->
-	<script src="js/modernizr-2.5.3-min.js"></script>
+	<script src="js/modernizr-latest.js"></script>
 	<!-- Icons -->
 	<!-- 16x16 -->
 	<link rel="shortcut icon" href="/favicon.ico">
@@ -64,18 +69,17 @@
 <!-- Obere Navigation -->
 	<nav id="nav_top" class="clearfix">
 	  <ul>
-	    <li><a id="contact" class="secondcolor" href="#">Kontakt</a></li>
-	    <li><a id="about" class="secondcolor" href="#">Impressum</a></li>
+	    <li><a id="about" class="secondcolor" href="#">Impressum & Kontakt</a></li>
     </ul>
 	</nav>
 <!-- Header -->
 	<header class="clearfix">
-		<div class="portrait"><img src="img/freelancer.jpg" alt="Mustermann"></div>
+		<div id="portrait"><img id="webfabrikanten" src="img/freelancer.jpg" alt="Mustermann"></div>
 		<div id="freelanceteam_description">
 			<div id="freelanceteam_description_content">
-				<p class="description black">Thomas Kaimer,<br />Alexander Paul</p>
-				<p class="description blue">Freelance Team für Webdesign</p>
-				<p class="description yellow">Hannover, Köln</p>
+				<h1 class="darkgray">Die&nbsp;WebFabrikanten:</h1>
+				<h2 class="blue">Thomas&nbsp;Kaimer<br />& Alexander&nbsp;Paul</h2>
+				<h3 class="yellow">Webdesigner Freelance-Team</h3>
 			</div>
 		</div>
 	</header>
@@ -84,8 +88,8 @@
 		<div class="wrapper_circleholder">
 			<hr id="line">
 			<div class="circleholder clearfix">
-				<div class="circle" id="unicolor_blue"></div>
-				<div class="circle" id="unicolor_yellow"></div>
+				<div class="circle" id="pencil_blue"></div>
+				<div class="circle" id="mouse_yellow"></div>
 			</div>
 		</div>
 		<!-- Untere Navigation -->
@@ -93,57 +97,106 @@
 			<ul>
 			  <li><a id="references" href="#">Referenzen</a></li>
 			  <li><a id="aboutus" href="#">Über uns</a></li>
-			  <li><a id="prices" href="#">Preise</a></li>
+			  <li><a id="prices" href="#">Preisbeispiele</a></li>
 		  </ul>
 		</nav>
-		<a class="up" href="#"><img class="pfeil" src="img/pfeil_weiss.png"></a>
+		<a class="up" href="#"><img class="pfeil  txt_last" src="img/pfeil_weiss.png"></a>
 	<!-- große Referenzen -->
 		<div id=referenzbox1 class="clearfix">
-			<div class="floatme"><p class="blue">Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+			<div class="floatme"><p>Die Webfabrikanten Thomas Kaimer und Alexander Paul fabrizieren nebenberuflich zuverlässig und effizient Websites für kleinere und mittlere Internetauftritte. Das Freelancer-Team ergänzt sich gegenseitig perfekt: Kaimer programmiert, designt aber auch eigene Sites. Paul ist Grafiker aus der analogen Welt mit Webdesigner-Zusatzausbildung.
+</p>
 			</div>
-		 	<div class="standardbox1">
-			 	<img src="img/referenz_gross.png" alt="">
+		 	<div id="standardbox1">
+			 	<img src="img/referenzen_800x500_funke.jpg" alt="">
 			</div>
-		 	<div class="standardbox2">
-			 	<img src="img/referenz_gross.png" alt="">
+		 	<div id="standardbox2">
+			 	<img src="img/referenzen_800x500_uebersetzer.jpg" alt="">
 			</div>
 		</div>
 	</section>
 	<section id="referenzen_klein">
 		<div id=referenzbox2 class="clearfix">
-			<div id="two_boxes">
-				<div class="textbox1"><p class="blue">11111111111 Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+			<div id="two_boxes" class="clearfix">
+				<div id="textbox1">
+					<div class="sichtbar">
+						<p class="txt_ref sichtbar">Diese Seite für einen hannoverschen Versicherungsmakler wurde von Alexander Paul grafisch mitentwickelt. Basis ist eine Joomla-Template, die von der Werbeagentur des Kunden individuell angepasst wurde.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Der Webauftritt dieses Übersetzungsbüro aus Hannover wurde von Thomas Kaimer designt und programmiert. Eine besondere Herausforderung lag in der zweisprachige (deutsch, russisch) Umsetzung.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Diese Restaurant-Seite wurde von Alexander Paul grafisch mitentwickelt. Basis ist eine Joomla-Template, die von der Werbeagentur des Kunden individuell angepasst wurde.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Ein Non-Profit-Projekt für die Förderschule Stolzenau realisiert mit dem Web Application Framework Ruby on Rails erstellt durch Thomas Kaimer. Zusätzlich Programmierung eines Online-Shops.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Der Webauftritt dieser Praxis für Alternative Heilmethoden ist ein Beispiel für eine Minimallösung. Sie wurde im CMS Blogger erstellt, damit die Kundin jederzeit eigene aktuelle Inhalte einpflegen kann. Durch den Verzicht auf weitere Features kann so ein sehr günstiger Preis erzielt werden.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Webauftritt des Carsten Bähre Anlagenservice mit Standardkomponenten wie Slider und Kontaktformular entwickelt von Thomas Kaimer. Programmierung: PHP und jQuery.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Das Portfolio von Alexander Paul mit Grafischem aus dem Printbereich hat er im Responsive Design als Grid-Layout angelegt. Die Single-Page-Lösung wirkt bewusst bunt um die Vielfalt seiner Arbeiten widerzuspiegeln.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Die Seite mit Strichzeichnungen von Alexander Paul ist ein Beispiel für eine Minimallösung. Auf dem CMS Wordpress aufbauend, dient es einer eng umrissenen Aufgabe in einem Design ohne Schnörkel.</p>
+					</div>
 				</div>
-			 	<div class="textbox2"><p class="blue">222222222222 Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit reratumque expla core, cus quam, ea qui aut rem</p>
+			 	<div id="textbox2">
+					<div class="versteckt">
+						<p class="txt_ref">Diese Seite für einen hannoverschen Versicherungsmakler wurde von Alexander Paul grafisch mitentwickelt. Basis ist eine Joomla-Template, die von der Werbeagentur des Kunden individuell angepasst wurde.</p>
+					</div>
+					<div class="sichtbar">
+						<p class="txt_ref sichtbar">Der Webauftritt dieses Übersetzungsbüro aus Hannover wurde von Thomas Kaimer designt und programmiert. Eine besondere Herausforderung lag in der zweisprachige (deutsch, russisch) Umsetzung.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Diese Restaurant-Seite wurde von Alexander Paul grafisch mitentwickelt. Basis ist eine Joomla-Template, die von der Werbeagentur des Kunden individuell angepasst wurde.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Ein Non-Profit-Projekt für die Förderschule Stolzenau realisiert mit dem Web Application Framework Ruby on Rails erstellt durch Thomas Kaimer. Zusätzlich Programmierung eines Online-Shops.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Der Webauftritt dieser Praxis für Alternative Heilmethoden ist ein Beispiel für eine Minimallösung. Sie wurde im CMS Blogger erstellt, damit die Kundin jederzeit eigene aktuelle Inhalte einpflegen kann. Durch den Verzicht auf weitere Features kann so ein sehr günstiger Preis erzielt werden.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Webauftritt des Carsten Bähre Anlagenservice mit Standardkomponenten wie Slider und Kontaktformular entwickelt von Thomas Kaimer. Programmierung: PHP und jQuery.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Das Portfolio von Alexander Paul mit Grafischem aus dem Printbereich hat er im Responsive Design als Grid-Layout angelegt. Die Single-Page-Lösung wirkt bewusst bunt um die Vielfalt seiner Arbeiten widerzuspiegeln.</p>
+					</div>
+					<div class="versteckt">
+						<p class="txt_ref">Die Seite mit Strichzeichnungen von Alexander Paul ist ein Beispiel für eine Minimallösung. Auf dem CMS Wordpress aufbauend, dient es einer eng umrissenen Aufgabe in einem Design ohne Schnörkel.</p>
+					</div>
 				</div>
 			</div>
-		 	<div class="textbox3">
+		 	<div id="textbox3">
 				 <!-- kleine Referenzen -->
 				<div id=referenzbox2>
-					<div class="clearfix">
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+					<div id="referenzliste" class="clearfix">
+						<div class="minibox1 aktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_funke.jpg" alt="">
 						</div>
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox1 aktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_uebersetzer.jpg" alt="">
 						</div>
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox1 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_heinrichs.jpg" alt="">
 						</div>
-						<div class="minibox2">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox2 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_niwa.jpg" alt="">
 						</div>
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox1 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_heike.jpg" alt="">
 						</div>
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox1 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_klima.jpg" alt="">
 						</div>
-						<div class="minibox1">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox1 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_alex.jpg" alt="">
 						</div>
-						<div class="minibox2">
-							<img src="img/referenz_klein.png" alt="">
+						<div class="minibox2 inaktiv">
+							<img class="vorschaubild" src="img/referenzen_800x500_zeichnungen.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -169,11 +222,11 @@
 			</div>
 			<div class="ueberunsbox2">
 				<h5>Dipl.-Ing. (FH) Thomas Kaimer</h5>
-				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re. Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+				<p>Der Diplom-Ingenieur erstellt nebenberuflich seit mehreren Jahren Websites für kleinere Unternehmen. Hauptberuflich supportet er institutionelle EDV-Arbeitsplätze. Durch seine französischen Sprachkenntnisse sind auch bilinguale Internetauftritte keine Herausforderung.</p>
 			</div>
 			<div class="ueberunsbox3">
 				<h5>Alexander Paul</h5>
-				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re. Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
+				<p>Arbeitet seit den Neunzigerjahren als Grafiker in der Werbung. Früher ausschließlich für Gedrucktes, inzwischen auch fürs weltweite Netz. Er ist Profi für Layout, Illustration und Bildbearbeitung für Gedrucktes und Gepixeltes. Durch seine Englischen Sprachkenntnisse sind auch bilinguale Internetauftritte keine Herausforderung.</p>
 			</div>
 		</div>
 	</section>
@@ -183,61 +236,50 @@
 		<div class="wrapper_circleholder clearfix">
 			<a class="up" href="#"><img class="pfeil" src="img/pfeil_schoko.png"></a>
 			<div class="circleholder clearfix">
-				<div class="circle" id="unicolor_blue"></div>
-				<div class="circle" id="unicolor_yellow"></div>
+				<div class="circle" id="onestar_blue"></div>
+				<div class="circle" id="twostar_yellow"></div>
 			</div>
 		</div>
 		<div class="clearfix">
 			<div class="preisbox1">
 				<h4>Preisbeispiele</h4>
-		</div>
-			<div class="preisbox2"></div>
-			<div class="preisbox3"></div>
-		</div>
-		<div class="clearfix">
+				<p>Jedes Projekt ist anders. Die Webfabrikanten betreuen freinebenberuflich kleinere und mittlere Auftritte und bieten für jeden Kunden die jeweils preiswerteste Lösung an. Unsere Preisbeispiele sind daher als eben das zu lesen: Als Beispiele.</p>
+			</div>
+			<div class="preisbox2">
+				<h5>Mini</h5>
+				<p>Basierend auf einem einfachen CMS-/Blog-System wie Wordpress oder Blogger nutzen wir vorhandene Templates (Vorlagen), die wir individuell in kleinem Umfang anpassen. Das eignet sich gut für eine sogenannte Webvisitenkarte ohne komplexe Funktionalität. Aufgrund der Plattform können Kunden ihre Inhalte dort selbst ändern und ergänzen. Für so eine Seite berechnen wir ca. 500 Euro.</p>
+			</div>
+			<div class="preisbox3">
+				<h5>Standard</h5>
+				<p>Der klassische Internetauftritt mit 5 bis 10 Unterseiten. Inklusiv Funktionalitäten wie z.B. Slider, Kontaktformulare, Forum, geschützte Bereiche, Suchfunktion.</p>
+			</div>
 			<div class="preisbox4">
-				<h5>Einfache Seite</h5>
-				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
-			</div>
-			<div class="preisbox5">
-				<h5>Standard-Seite</h5>
-				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
-			</div>
-			<div class="preisbox6">
-				<h5>Premium-Seite</h5>
-				<p>Eversperum volore consequis rat. Iquunt, sunt. Arionsequis dolor solut faccaeraecae ad enesto et quodior sit re</p>
-			</div>
-		</div>
-		<hr>
-	</section>
-<!-- Kontakt -->
-	<section id="kontakt">
-		<a class="up" href="#"><img class="pfeil" src="img/pfeil_orange.png"></a>
-		<div class="clearfix">
-			<div class="kontaktbox1">
-				<h4 class="abstand">Nehmen Sie Kontakt mit uns auf</h4>
-				<p>Haben Sie Fragen oder wünschen Sie weitere Informationen? Füllen Sie bitte unser Kontaktformular aus.</p>
-			</div>
-			<div class="kontaktbox2">
-				<form class="clearfix">
-					<label for="fullname">Name:</label>
-					<input type="text" name="fullname" required  />
-					<label for="email">E-Mail:</label>
-					<input type="email" name="email" required  />
-					<label for="message">Nachricht:</label>	
-					<textarea rows="8" cols="50" required></textarea>
-	 				<input type="submit" value="Senden">
-				</form>
+				<h5>Premium</h5>
+				<p>Alles, was über Standard hinausgeht.</p>
+				<ul id="preisliste">
+					<li>Mehr an Unterseiten,</li>
+					<li>integrierte Funktionalitäten von A wie Accessibility bis Z wie Zertifizierung,</li>
+					<li>Kompletterstellung von Grund auf, Responsive Design für Desktop/Tablet/Handy,</li>
+					<li>CMS-Systeme wie Typo3 oder Joomla,</li>
+					<li>Erstellen von Onlineshops,</li>
+					<li>Datenbankprogrammierung mit MySql und PHP.</li>
+				</ul>
 			</div>
 		</div>
 	</section>
 	<!-- Impressum -->
 	<section id="impressum">
 		<hr class="hr_schoko">
-		<a class="up" href="#"><img class="pfeil" src="img/pfeil_schoko.png"></a>
+		<div class="wrapper_circleholder clearfix">
+			<a class="up" href="#"><img class="pfeil" src="img/pfeil_schoko.png"></a>
+			<div class="circleholder clearfix">
+				<div class="circle" id="unicolor_blue"></div>
+				<div class="circle" id="unicolor_yellow"></div>
+			</div>
+		</div>
 		<div class="clearfix">
 			<div class="impressumbox1">
-				<h4 class="abstand">Impressum</h4>
+				<h4 class="abstand">Impressum & Kontakt</h4>
 				<h5>Angaben gemäß § 5 TMG:</h5>
 			</div>
 			<div class="impressumbox2">
@@ -253,12 +295,17 @@
 			<div class="impressumbox4">
 				<p class="txt_impressum">Telefon: 0511 2353890</p>
 				<p class="txt_impressum">Telefax: +49 32224309503</p>
-				<p class="txt_impressum txt_last">kontakt@wir.koennen.es</p>
+				<p class="txt_impressum txt_last"><a href="mailto:kontakt@webfabrikanten.de">kontakt@webfabrikanten.de</a></p>
 			</div>
 		</div>
+		<div class="distancewrapper">
+			<p class="txt_impressum txt_last">Quelle: <i><a href="http://www.e-recht24.de">http://www.e-recht24.de</a>, Impressum Generator</i></p>
+			<h5>Haftungsausschluss:</h5>
+			<p class="txt_impressum"><strong>Datenschutzerklärung für die Nutzung von Google Analytics</strong></p> 
+			<p class="txt_impressum">Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"). Google Analytics verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.</p> <p class="txt_impressum">Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</p> <p class="txt_impressum">Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a>.<p class="txt_impressum"> </p>
+			<p class="txt_impressum txt_last"><i>Quellverweis: <a href="http://www.google.com/intl/de/analytics/privacyoverview.html" target="_blank">Google Analytics Datenschutzerklärung</a></i></p>
+		</div>
+	
 	</section>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/freelanceteam.js"></script>
-	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 </body>
 </html>
