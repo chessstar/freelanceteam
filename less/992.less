@@ -12,7 +12,7 @@
 // 1. ROOT 					==============================
 // 2. TYPOGRAPHY 			==============================
 p, li	{
-	.font-size(18);
+	.font-size(14);
 	}
 h4, h5	{
 	.font-size(20);
@@ -28,28 +28,16 @@ h3	{
 	.font-size(20);
 	line-height : 1.2; }
 nav#nav_bottom ul li a, nav#nav_top ul li a {
-  height: @heightNavigationBottom * 130/110; // Änderung font-size von 110% auf 130 % umgesetzt
-  line-height: @heightNavigationBottom * 130 / 110;
-  font-size: 130%;
+  height: @heightNavigationBottom * 18 / 14; // Änderung font-size von 14 auf 16 umgesetzt
+  line-height: @heightNavigationBottom * 18 / 14;
+  .font-size(18);
 }
 nav#nav_top, nav#nav_bottom  {
-  height: @heightNavigationTop * 130 / 110;
+  height: @heightNavigationTop * 18 / 14;
 }
 nav#nav_bottom	{
 	position:absolute;
-	top:@heightNavigationTop * 130 / 110;  // Position absolut in Abhängigkeit der Veränderung font-size anpassen
-	}
-p.blue	{
-	color:@darkBlue;
-	margin:0.8em 0;
-	font-size:140%;
-	}
-p.yellow	{
-	color:@darkYellow;
-	font-size:140%;
-	}
-p.schoko {
-	font-size:180%;
+	top:@heightNavigationTop * 18 / 14;  // Position absolut in Abhängigkeit der Veränderung font-size anpassen
 	}
 // 3. COLOUR 				==============================
 // 4. TEXTURE 				==============================
@@ -64,115 +52,106 @@ p.schoko {
 	max-width: 47%;
 	}
 nav#nav_top ul {
-  margin:0 2.5% 0 0;
+  margin:0 7.5% 0 0;
 }
 nav#nav_bottom	{
-	right:2.5%;
+	right:7.5%;
 }
 .circleholder	{
-	margin-right:2.5%;
+	margin-right:7.5%;
 	}
 .up	{
-	margin-left:2.5%;
+	margin-left:7.5%;
 	}
 .floatme	{
-	max-width:46%;
-	margin-left:2.5%;
+	max-width:41%;
+	margin-left:7.5%;
 	margin-right:1.25%;
 	float:left;
 	}
 #standardbox1	{
-	max-width:22%;
+	max-width:19.5%;
 	margin-left:1.25%;
 	margin-right:1.25%;
 	float:left;
 	}
 #standardbox2	{
-	max-width:22%;
+	max-width:19.5%;
 	margin-left:1.25%;
-	margin-right:2.5%;
+	margin-right:7.5%;
 	float:left;
 	}
 .distancewrapper	{
-	margin:0 2.5%;
+	margin:0 7.5%;
 	}
 #two_boxes	{
 .box-sizing(border-box);
-	margin:2.5% 2.5% 2.5% 1.25%;
-	max-width:46.25%;
+	margin:2.5% 7.5% 2.5% 1.25%;
+	width:41.25%;
+	max-width:41.25%;
 	float:right;
 }
 #textbox3	{
 	.box-sizing(border-box);
-	max-width:46.25%;
-	margin:2.5% 1.25% 2.5% 2.5%;
+	max-width:41.25%;
+	margin:2.5% 1.25% 2.5% 7.5%;
 	float:left;
 	}
 
 .ueberunsbox1	{
-	width:46.25%;
-	margin:0 0 0 2.5%;
+	width:41.25%;
+	margin:0 0 0 7.5%;
 	float:left;
 	}
 .ueberunsbox2	{
-	width:46.25%;
+	width:41.25%;
 	clear:both;
-	margin:0 1.25% 0 2.5%;
+	margin:0 1.25% 0 7.5%;
 	}
 .ueberunsbox3	{
-	width:46.25%;
+	width:41.25%;
 	float:left;
-	margin:0 2.5% 0 1.25%;
+	margin:0 7.5% 0 1.25%;
 	}
 .preisbox1	{
-	width:46.25%;
+	width:41.25%;
 	float:left;
-	margin:0 0 0 2.5%;
+	margin:0 0 0 7.5%;
 	}
 .preisbox2	{
-	width:46.25%;
+	width:41.25%;
 	clear:both;
-	margin:0 1.25% 0 2.5%;
+	margin:0 1.25% 0 7.5%;
 	}
 .preisbox3	{
-	width:46.25%;
+	width:41.25%;
 	float:left;
-	margin:0 2.5% 0 1.25%;
+	margin:0 7.5% 0 1.25%;
 	}
 .preisbox4	{
-	width:95%;
+	width:85%;
 	clear:both;
-	margin:0 2.5% 0 2.5%;
-	}
-.kontaktbox1	{
-	width:46.25%;
-	float:left;
-	margin:0 1.25% 0 2.5%;
-	}
-.kontaktbox2	{
-	width:46.25%;
-	float:left;
-	margin:0 2.5% 0 1.25%;
+	margin:0 7.5% 0 7.5%;
 	}
 .impressumbox1 {
-	margin:0 0 0 2.5%;
+	margin:0 0 0 7.5%;
 }
 .impressumbox2 {
-	margin:0 1.25% 0 2.5%;
+	margin:0 1.25% 0 7.5%;
 	float:left;
-	width:46%;
-	max-width:46%;
+	width:41%;
+	max-width:41%;
 }
 .impressumbox3	{
-	margin:0 1.25% 0 2.5%;
+	margin:0 7.5% 0 1.25%;
 	float:left;
-	width:46%;
-	max-width:46%;
+	width:41%;
+	max-width:41%;
 	}
 .impressumbox4	{
-	margin:0 1.25% 0 2.5%;
-	width:46%;
-	max-width:46%;
+	margin:0 1.25% 0 7.5%;
+	width:41%;
+	max-width:41%;
 	}
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================

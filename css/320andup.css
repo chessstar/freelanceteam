@@ -141,7 +141,7 @@ body {
   padding: 0;
   width: 100%;
   background-color: transparent;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5em;
@@ -270,9 +270,6 @@ li ol {
   margin: 0;
   font-size: 16px;
   font-size: 1.6rem;
-}
-li {
-  margin-bottom: 0.25em;
 }
 blockquote {
   margin: 0 0 1.5em -24px;
@@ -512,7 +509,7 @@ a.secondcolor:active {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
   color: #9c8611;
@@ -1325,7 +1322,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1568,7 +1565,7 @@ input:-moz-placeholder {
   *zoom: 1;
   padding: 6px 11px 6px;
   margin-bottom: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -1901,6 +1898,14 @@ table tbody tr:hover th {
 header {
   background-color: #ffffff;
 }
+/* Silbentrennung */
+p {
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -hyphens: auto;
+}
 /* Noscript */
 #noscript {
   position: fixed;
@@ -1938,7 +1943,8 @@ nav#nav_top ul li a {
   text-align: center;
   height: 30px;
   line-height: 30px;
-  font-size: 110%;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 /* Navigation bottom -> Zentrierung siehe : http://csswizardry.com/demos/centred-nav/ */
 nav#nav_bottom {
@@ -1960,7 +1966,8 @@ nav#nav_bottom ul li a {
   display: inline-block;
   height: 30px;
   line-height: 30px;
-  font-size: 110%;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 /* Portrait */
 #portrait {
@@ -2008,7 +2015,7 @@ h3.yellow {
   width: 100%;
 }
 .circleholder {
-  width: 110px;
+  width: 170px;
   margin: 0 auto;
 }
 .circle {
@@ -2020,11 +2027,11 @@ h3.yellow {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #ffffff;
   border-left: solid 2px #ffffff;
   border-right: solid 2px #ffffff;
@@ -2035,17 +2042,17 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-right: 5px;
+  margin-right: 10px;
 }
 #mouse_yellow {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #ffffff;
   border-left: solid 2px #ffffff;
   border-right: solid 2px #ffffff;
@@ -2056,17 +2063,17 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 #onestar_blue {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #ffffff;
   border-left: solid 2px #ffffff;
   border-right: solid 2px #ffffff;
@@ -2077,17 +2084,17 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-right: 5px;
+  margin-right: 10px;
 }
 #twostar_yellow {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #ffffff;
   border-left: solid 2px #ffffff;
   border-right: solid 2px #ffffff;
@@ -2098,17 +2105,17 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 #photo_blue {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #00538d;
   border-left: solid 2px #00538d;
   border-right: solid 2px #00538d;
@@ -2119,17 +2126,17 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-right: 5px;
+  margin-right: 10px;
 }
 #photo_yellow {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 37.5px;
+  -moz-border-radius: 37.5px;
+  border-radius: 37.5px;
   border-top: solid 2px #f89848;
   border-left: solid 2px #f89848;
   border-right: solid 2px #f89848;
@@ -2140,7 +2147,7 @@ h3.yellow {
   -o-background-size: contain;
   background-size: contain;
   behavior: url(/PIE.htc);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 /* Ende Circle */
 /* Section mit Inhalt */
@@ -2242,9 +2249,6 @@ section#preise {
   padding-right: 0%;
   float: left;
 }
-p.txt_ref {
-  margin-bottom: 0.125em;
-}
 #textbox3 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2252,6 +2256,9 @@ p.txt_ref {
   box-sizing: border-box;
   margin-left: 5%;
   margin-right: 5%;
+}
+p.txt_ref {
+  margin-bottom: 0.125em;
 }
 .minibox1 {
   -webkit-box-sizing: border-box;
@@ -2299,11 +2306,6 @@ ul#preisliste {
   list-style-type: circle;
   margin-left: 0.3em;
 }
-/* SECTION Kontakt */
-.kontaktbox1,
-.kontaktbox2 {
-  margin: 0 5%;
-}
 /* SECTION Impressum */
 .impressumbox1,
 .impressumbox2,
@@ -2313,7 +2315,8 @@ ul#preisliste {
 }
 p.txt_impressum {
   margin-bottom: 0;
-  font-size: 85%;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 /* Formular */
 form {
@@ -2442,20 +2445,6 @@ input[type="submit"] {
     font-size: 1.4rem;
     line-height: 1.2;
   }
-  p.blue {
-    color: #00538d;
-    margin: 0.8em 0;
-    font-size: 100%;
-  }
-  p.yellow {
-    color: #f89848;
-    font-size: 100%;
-  }
-  p.schoko {
-    color: #574b41;
-    font-weight: 700;
-    font-size: 120%;
-  }
 }
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
@@ -2464,8 +2453,8 @@ input[type="submit"] {
   /* 768 =================================================== */
   p,
   li {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
   }
   h4,
   h5 {
@@ -2487,29 +2476,18 @@ input[type="submit"] {
   }
   nav#nav_bottom ul li a,
   nav#nav_top ul li a {
-    height: 32.72727272727273px;
-    line-height: 32.72727272727273px;
-    font-size: 120%;
+    height: 34.285714285714285px;
+    line-height: 34.285714285714285px;
+    font-size: 18px;
+    font-size: 1.8rem;
   }
   nav#nav_top,
   nav#nav_bottom {
-    height: 32.72727272727273px;
+    height: 34.285714285714285px;
   }
   nav#nav_bottom {
     position: absolute;
-    top: 32.72727272727273px;
-  }
-  p.blue {
-    color: #00538d;
-    margin: 0.8em 0;
-    font-size: 120%;
-  }
-  p.yellow {
-    color: #f89848;
-    font-size: 120%;
-  }
-  p.schoko {
-    font-size: 160%;
+    top: 34.285714285714285px;
   }
   .portrait {
     margin: 0 3% 0 12.5%;
@@ -2558,6 +2536,7 @@ input[type="submit"] {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     margin: 2.5% 12.5% 2.5% 1.5%;
+    width: 49%;
     max-width: 49%;
     float: right;
   }
@@ -2566,6 +2545,7 @@ input[type="submit"] {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    width: 47%;
     max-width: 47%;
     padding-left: 0%;
     padding-right: 0%;
@@ -2577,6 +2557,7 @@ input[type="submit"] {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    width: 47%;
     max-width: 47%;
     margin-left: 3%;
     padding-left: 0%;
@@ -2627,16 +2608,6 @@ input[type="submit"] {
     float: left;
     margin: 0 12.5% 0 0;
   }
-  .kontaktbox1 {
-    width: 23%;
-    float: left;
-    margin: 0 3% 0 12.5%;
-  }
-  .kontaktbox2 {
-    width: 49%;
-    float: left;
-    margin: 0 12.5% 0 0;
-  }
   .impressumbox1 {
     margin: 0 0 0 12.5%;
   }
@@ -2663,8 +2634,8 @@ input[type="submit"] {
   /* 992 =================================================== */
   p,
   li {
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 14px;
+    font-size: 1.4rem;
   }
   h4,
   h5 {
@@ -2686,29 +2657,18 @@ input[type="submit"] {
   }
   nav#nav_bottom ul li a,
   nav#nav_top ul li a {
-    height: 35.45454545454545px;
-    line-height: 35.45454545454545px;
-    font-size: 130%;
+    height: 38.57142857142857px;
+    line-height: 38.57142857142857px;
+    font-size: 18px;
+    font-size: 1.8rem;
   }
   nav#nav_top,
   nav#nav_bottom {
-    height: 35.45454545454545px;
+    height: 38.57142857142857px;
   }
   nav#nav_bottom {
     position: absolute;
-    top: 35.45454545454545px;
-  }
-  p.blue {
-    color: #00538d;
-    margin: 0.8em 0;
-    font-size: 140%;
-  }
-  p.yellow {
-    color: #f89848;
-    font-size: 140%;
-  }
-  p.schoko {
-    font-size: 180%;
+    top: 38.57142857142857px;
   }
   .portrait {
     margin: 0 3% 0 0;
@@ -2719,45 +2679,46 @@ input[type="submit"] {
     max-width: 47%;
   }
   nav#nav_top ul {
-    margin: 0 2.5% 0 0;
+    margin: 0 7.5% 0 0;
   }
   nav#nav_bottom {
-    right: 2.5%;
+    right: 7.5%;
   }
   .circleholder {
-    margin-right: 2.5%;
+    margin-right: 7.5%;
   }
   .up {
-    margin-left: 2.5%;
+    margin-left: 7.5%;
   }
   .floatme {
-    max-width: 46%;
-    margin-left: 2.5%;
+    max-width: 41%;
+    margin-left: 7.5%;
     margin-right: 1.25%;
     float: left;
   }
   #standardbox1 {
-    max-width: 22%;
+    max-width: 19.5%;
     margin-left: 1.25%;
     margin-right: 1.25%;
     float: left;
   }
   #standardbox2 {
-    max-width: 22%;
+    max-width: 19.5%;
     margin-left: 1.25%;
-    margin-right: 2.5%;
+    margin-right: 7.5%;
     float: left;
   }
   .distancewrapper {
-    margin: 0 2.5%;
+    margin: 0 7.5%;
   }
   #two_boxes {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 2.5% 2.5% 2.5% 1.25%;
-    max-width: 46.25%;
+    margin: 2.5% 7.5% 2.5% 1.25%;
+    width: 41.25%;
+    max-width: 41.25%;
     float: right;
   }
   #textbox3 {
@@ -2765,74 +2726,64 @@ input[type="submit"] {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    max-width: 46.25%;
-    margin: 2.5% 1.25% 2.5% 2.5%;
+    max-width: 41.25%;
+    margin: 2.5% 1.25% 2.5% 7.5%;
     float: left;
   }
   .ueberunsbox1 {
-    width: 46.25%;
-    margin: 0 0 0 2.5%;
+    width: 41.25%;
+    margin: 0 0 0 7.5%;
     float: left;
   }
   .ueberunsbox2 {
-    width: 46.25%;
+    width: 41.25%;
     clear: both;
-    margin: 0 1.25% 0 2.5%;
+    margin: 0 1.25% 0 7.5%;
   }
   .ueberunsbox3 {
-    width: 46.25%;
+    width: 41.25%;
     float: left;
-    margin: 0 2.5% 0 1.25%;
+    margin: 0 7.5% 0 1.25%;
   }
   .preisbox1 {
-    width: 46.25%;
+    width: 41.25%;
     float: left;
-    margin: 0 0 0 2.5%;
+    margin: 0 0 0 7.5%;
   }
   .preisbox2 {
-    width: 46.25%;
+    width: 41.25%;
     clear: both;
-    margin: 0 1.25% 0 2.5%;
+    margin: 0 1.25% 0 7.5%;
   }
   .preisbox3 {
-    width: 46.25%;
+    width: 41.25%;
     float: left;
-    margin: 0 2.5% 0 1.25%;
+    margin: 0 7.5% 0 1.25%;
   }
   .preisbox4 {
-    width: 95%;
+    width: 85%;
     clear: both;
-    margin: 0 2.5% 0 2.5%;
-  }
-  .kontaktbox1 {
-    width: 46.25%;
-    float: left;
-    margin: 0 1.25% 0 2.5%;
-  }
-  .kontaktbox2 {
-    width: 46.25%;
-    float: left;
-    margin: 0 2.5% 0 1.25%;
+    margin: 0 7.5% 0 7.5%;
   }
   .impressumbox1 {
-    margin: 0 0 0 2.5%;
+    margin: 0 0 0 7.5%;
   }
   .impressumbox2 {
-    margin: 0 1.25% 0 2.5%;
+    margin: 0 1.25% 0 7.5%;
     float: left;
-    width: 46%;
-    max-width: 46%;
+    width: 41%;
+    max-width: 41%;
   }
   .impressumbox3 {
-    margin: 0 1.25% 0 2.5%;
+    margin: 0 7.5% 0 1.25%;
     float: left;
-    width: 46%;
-    max-width: 46%;
+    width: 41%;
+    max-width: 41%;
   }
   .impressumbox4 {
-    margin: 0 1.25% 0 2.5%;
-    width: 46%;
-    max-width: 46%;
+    margin: 0 1.25% 0 7.5%;
+    width: 41%;
+    max-width: 41%;
   }
 }
 @media only screen and (min-width: 1382px) {

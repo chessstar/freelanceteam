@@ -12,7 +12,7 @@
 // 1. ROOT 					==============================
 // 2. TYPOGRAPHY 			==============================
 p, li	{
-	.font-size(16);
+	.font-size(14);
 	}
 h4, h5	{
 	.font-size(18);
@@ -28,28 +28,16 @@ h3	{
 	.font-size(18);
 	line-height : 1.2; }
 nav#nav_bottom ul li a, nav#nav_top ul li a {
-  height: @heightNavigationBottom * 120 / 110; // Änderung font-size von 110% auf 120 % umgesetzt
-  line-height: @heightNavigationBottom * 120 / 110;
-  font-size: 120%;
+  height: @heightNavigationBottom * 16 / 14; // Änderung font-size von 14 auf 16 umgesetzt
+  line-height: @heightNavigationBottom * 16 / 14;
+  .font-size(18);
 }
 nav#nav_top, nav#nav_bottom  {
-  height: @heightNavigationTop * 120 / 110;
+  height: @heightNavigationTop * 16 / 14;
 }
 nav#nav_bottom	{
 	position:absolute;
-	top:@heightNavigationTop * 120 / 110;  // Position absolut in Abhängigkeit der Veränderung font-size anpassen
-	}
-p.blue	{
-	color:@darkBlue;
-	margin:0.8em 0;
-	font-size:120%;
-	}
-p.yellow	{
-	color:@darkYellow;
-	font-size:120%;
-	}
-p.schoko {
-	font-size:160%;
+	top:@heightNavigationTop * 16 / 14;  // Position absolut in Abhängigkeit der Veränderung font-size anpassen
 	}
 // 3. COLOUR 				==============================
 // 4. TEXTURE 				==============================
@@ -99,11 +87,13 @@ nav#nav_bottom	{
 #two_boxes	{
 .box-sizing(border-box);
 	margin:2.5% 12.5% 2.5% 1.5%;
+	width:49%;
 	max-width:49%;
 	float:right;
 }
 #textbox1	{
 	.box-sizing(border-box);
+	width:47%;
 	max-width:47%;
 	padding-left:0%;
 	padding-right:0%;
@@ -112,6 +102,7 @@ nav#nav_bottom	{
 	}
 #textbox2	{
 	.box-sizing(border-box);
+	width:47%;
 	max-width:47%;
 	margin-left:3%;
 	padding-left:0%;
@@ -156,16 +147,6 @@ nav#nav_bottom	{
 	}
 .preisbox4	{
 	width:23%;
-	float:left;
-	margin:0 12.5% 0 0;
-	}
-.kontaktbox1	{
-	width:23%;
-	float:left;
-	margin:0 3% 0 12.5%;
-	}
-.kontaktbox2	{
-	width:49%;
 	float:left;
 	margin:0 12.5% 0 0;
 	}

@@ -74,8 +74,17 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @schoko: #574b41;
 @heightNavigationTop: 30px; // Höhe der Navigation dient auch zur vertikalen Textausrichtung siehe "line-height"
 @heightNavigationBottom: 30px; // Höhe der Navigation dient auch zur vertikalen Textausrichtung siehe "line-height"
+@abstandCircle: 10px; // Abstand der beiden Kreise untereinander
 header {
 	background-color:@white;
+}
+/* Silbentrennung */
+p { 
+   -moz-hyphens: auto;
+   -o-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+   -hyphens: auto; 
 }
 /* Noscript */
 #noscript	{
@@ -113,7 +122,7 @@ nav#nav_top ul li a {
   text-align: center;
   height: @heightNavigationTop;
   line-height: @heightNavigationTop;
-  font-size: 110%;
+  .font-size(14);
 }
 /* Navigation bottom -> Zentrierung siehe : http://csswizardry.com/demos/centred-nav/ */
 nav#nav_bottom {
@@ -135,7 +144,7 @@ nav#nav_bottom ul li a {
 	display:inline-block;
   height: @heightNavigationBottom;
   line-height: @heightNavigationBottom;
-  font-size: 110%;
+  .font-size(14);
 }
 /* Portrait */
 #portrait {
@@ -186,7 +195,7 @@ h3.yellow	{
 	width:100%;
 }
 .circleholder	{
-	width:110px; // = 2 x Kreisdurchmesser + 2 x Abstand
+	width:150px+(2*@abstandCircle); // = 2 x Kreisdurchmesser + 2 x Abstand
 	margin:0 auto;
 	}
 .circle	{
@@ -195,46 +204,46 @@ h3.yellow	{
 	display:inline;
 	}
 #pencil_blue	{
-	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkBlue url('../img/stift.png') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-right:5px;
+	margin-right:@abstandCircle;
 	}
 #mouse_yellow	{
-	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkYellow url('../img/maus.png') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-left:5px;
+	margin-left:@abstandCircle;
 	}
 #onestar_blue	{
-	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkBlue url('../img/einstern.png') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-right:5px;
+	margin-right:@abstandCircle;
 	}
 #twostar_yellow	{
-	.circled(@circle-color: #fff, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkYellow url('../img/zweistern.png') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-left:5px;
+	margin-left:@abstandCircle;
 	}
 #photo_blue	{
-	.circled(@circle-color: @darkBlue, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: @darkBlue, @diameter: 75px, @thickness: 2px);
 	background:#ffffff url('../img/kopf_1.jpg') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-right:5px;
+	margin-right:@abstandCircle;
 	}
 #photo_yellow	{
-	.circled(@circle-color: @darkYellow, @diameter: 50px, @thickness: 2px);
+	.circled(@circle-color: @darkYellow, @diameter: 75px, @thickness: 2px);
 	background:#ffffff url('../img/kopf_2.jpg') no-repeat center center;
 	.background-size(contain);
 	behavior: url(/PIE.htc);
-	margin-left:5px;
+	margin-left:@abstandCircle;
 	}
 /* Ende Circle */
 /* Section mit Inhalt */
@@ -300,14 +309,14 @@ section#preise	{
 	padding-right:0%;
 	float:left;
 	}
-p.txt_ref	{
-	margin-bottom:@baselineheight / 12;
-}
 #textbox3	{
 	.box-sizing(border-box);
 	margin-left:5%;
 	margin-right:5%;
 	}
+p.txt_ref	{
+	margin-bottom:@baselineheight / 12;
+}
 // Wegen unterschiedlichen Randes der letzen Box in der Reihe
 // gibt es 2 verschiedene minibox's
 .minibox1	{
@@ -345,17 +354,13 @@ ul#preisliste	{
 	list-style-type: circle;
 	margin-left:0.3em;
 	}
-/* SECTION Kontakt */
-.kontaktbox1, .kontaktbox2	{
-	margin:0 5%;
-	}
 /* SECTION Impressum */
 .impressumbox1, .impressumbox2, .impressumbox3, .impressumbox4	{
 	margin:0 5%;
 	}
 p.txt_impressum	{
 	margin-bottom:0;
-	font-size:85%;
+	.font-size(14);
 }
 /* Formular */
 form	{
