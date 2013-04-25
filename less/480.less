@@ -24,6 +24,33 @@ h3	{
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
+/* Portrait */
+#portrait {
+	margin:0 2% 0 2%;
+	float:left;
+	max-width: 55%;
+	}
+
+#freelanceteam_description	{
+	float:left;
+	margin:0;
+	max-width: 40%;
+	display:table;
+	// Die vertikale Zentrierung funktioniert nur bei fixer Höhe !
+	// Lösung 1:Jquery UI Position !! VERALTET !!, da keine IE8 Unterstützung
+	// Ausrichtung via display:table siehe Variante 1-> http://blog.themeforest.net/tutorials/vertical-centering-with-css/
+	}
+#freelanceteam_description_content	{
+	display:table-cell; 
+	vertical-align:middle;
+	//position:absolute;
+	margin:0 2% 0 0;
+} 	// siehe Anmerkung oberhalb
+
+#freelanceteam_description_content_noflex	{
+	display:none;
+	}
+
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================

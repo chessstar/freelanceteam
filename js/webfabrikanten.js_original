@@ -1,0 +1,68 @@
+var webfab = webfab || {};
+
+webfab.imgSwitcher = function($)	{
+
+	var anzahl = $(".vorschaubild").size();
+	var pos1;
+	var pos2;
+	var src1;
+	var src2;
+
+	function init(imagePosition)	{
+		pos1 = imagePosition;
+		if (pos1 === anzahl-1)
+			{
+				pos2 = 0; // Letztes Bild ? Dann 1. Bild auswählen
+			}
+		else
+			{
+				pos2 = pos1+1 // Bild daneben auswählen
+			}
+		src1 = $(".vorschaubild").eq(pos1).attr('src');
+		src2 = $(".vorschaubild").eq(pos2).attr('src');
+		// Start fadeIn,fadeOut
+		fadeimages($('#standardbox1'),src1);
+		fadeimages($('#standardbox2'),src2);
+		fadetext($('#textbox1'),pos1);
+		fadetext($('#textbox2'),pos2);
+		textboxhoehe();
+	}
+
+	function fadeimages(referenz,source)	{
+		referenz.append('<img class="versteckt" src='+source+'>');
+ 		referenz.children().eq(0).stop(true, true).fadeOut('fast', function() {
+			referenz.children().eq(1).stop(true, true).fadeIn('fast');
+			referenz.children().eq(0).remove();
+		});
+	}
+
+	function fadetext(referenz,position)	{
+ 		referenz.children(".sichtbar").stop(true, true).fadeOut('fast', function() {
+			referenz.children(".sichtbar").removeClass('sichtbar').addClass('versteckt');
+			referenz.children().eq(position).stop(true, true).fadeIn('fast');
+			referenz.children().eq(position).removeClass('versteckt').addClass('sichtbar');
+		});
+	}
+
+	function textboxhoehe()	{
+		var box1 = $('#textbox1').height();
+		var box2 = $('#textbox2').height();
+		var hoehe = Math.max(box1,box2);
+		$('#two_boxes').height(hoehe);
+	}
+
+	return {
+		init: init,
+	}
+
+}(jQuery);
+
+
+
+
+$(document).ready(function() {
+	
+	webfab.imgSwitcher.init(1);
+
+
+});

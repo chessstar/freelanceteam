@@ -78,14 +78,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 header {
 	background-color:@white;
 }
-/* Silbentrennung */
-p { 
-   -moz-hyphens: auto;
-   -o-hyphens: auto;
-   -webkit-hyphens: auto;
-   -ms-hyphens: auto;
-   -hyphens: auto; 
-}
 /* Noscript */
 #noscript	{
 	position:fixed;
@@ -150,35 +142,42 @@ nav#nav_bottom ul li a {
 #portrait {
 	margin:0 2% 0 2%;
 	float:left;
-	max-width: 55%;
+	max-width: 96%;
 	}
+
 #freelanceteam_description	{
 	float:left;
 	margin:0;
-	max-width: 40%;
-	// Die vertikale Zentrierung funktioniert nur bei fixer Höhe
-	// Deshalb wird Jquery UI -> Position eigesetzt iehe webfabrikanten.js
+	max-width: 100%;
+	display:table;
+	// Die vertikale Zentrierung funktioniert nur bei fixer Höhe !
+	// Lösung 1:Jquery UI Position !! VERALTET !!, da keine IE8 Unterstützung
+	// Ausrichtung via display:table siehe Variante 1-> http://blog.themeforest.net/tutorials/vertical-centering-with-css/
 	}
+#freelanceteam_description_content_noflex	{
+	margin:2% 10%;
+	width:80%;
+} 	// wird ab 480px ausgeblendet
 #freelanceteam_description_content	{
-	position:absolute;
-	margin:0 2% 0 0;
-} // siehe Anmerkung oberhalb
+	display:none;
+} 	// wird ab 480px eingeblendet
 h1.darkgray	{
 	color:@darkGray;
-	font-weight:700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-weight:400;
 	margin-bottom:0.2em;
+	.font-size(16);
 	}
 h2.blue	{
 	color:@darkBlue;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight:700;
+	font-weight:400;
 	margin-bottom:0.2em;
+	.font-size(16);
 	}
 h3.yellow	{
 	color:@darkYellow;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight:300;
+	font-weight:400;
+	margin-bottom:0.2em;
+	.font-size(16);
 	}
 
 /* Circle */
@@ -206,42 +205,56 @@ h3.yellow	{
 #pencil_blue	{
 	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkBlue url('../img/stift.png') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-right:@abstandCircle;
 	}
 #mouse_yellow	{
 	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
 	background:@darkYellow url('../img/maus.png') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
+	behavior: url(/PIE.htc);
+	margin-left:@abstandCircle;
+	}
+#phone_blue	{
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
+	background:@darkBlue url('../img/phone.png') no-repeat center center;
+	.background-size(cover);
+	behavior: url(/PIE.htc);
+	margin-right:@abstandCircle;
+	}
+#email_yellow	{
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
+	background:@darkYellow url('../img/email.png') no-repeat center center;
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-left:@abstandCircle;
 	}
 #onestar_blue	{
-	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 0px);
 	background:@darkBlue url('../img/einstern.png') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-right:@abstandCircle;
 	}
 #twostar_yellow	{
-	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 2px);
+	.circled(@circle-color: #fff, @diameter: 75px, @thickness: 0px);
 	background:@darkYellow url('../img/zweistern.png') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-left:@abstandCircle;
 	}
 #photo_blue	{
 	.circled(@circle-color: @darkBlue, @diameter: 75px, @thickness: 2px);
 	background:#ffffff url('../img/kopf_1.jpg') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-right:@abstandCircle;
 	}
 #photo_yellow	{
 	.circled(@circle-color: @darkYellow, @diameter: 75px, @thickness: 2px);
 	background:#ffffff url('../img/kopf_2.jpg') no-repeat center center;
-	.background-size(contain);
+	.background-size(cover);
 	behavior: url(/PIE.htc);
 	margin-left:@abstandCircle;
 	}
@@ -337,10 +350,10 @@ p.txt_ref	{
 	cursor:pointer;
 }
 .aktiv	{
-	border:1px solid @darkYellow;
+	// border:1px solid @darkYellow; Outline um Thumbs
 }
 .inaktiv	{
-	border:1px solid transparent;
+	// border:1px solid transparent; / Outline um Thumbs
 }
 /* SECTION Über uns */
 .ueberunsbox1, .ueberunsbox2, .ueberunsbox3	{
@@ -384,6 +397,9 @@ input[type="submit"]	{
 	}
 .txt_last	{
 	padding-bottom:1em;
+}
+.txt_ohne	{
+	margin:0;
 }
 .kein_umbruch	{
 	white-space : nowrap;
